@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.4 (2025-06-24)
+
+- src/routes/(user)/+layout.svelte
+- src/routes/(user)/dashboard/contacts/+page.svelte
+
 ## v1.0.3 (2025-06-21)
 
 - src/routes/(default)/login/+page.svelte
