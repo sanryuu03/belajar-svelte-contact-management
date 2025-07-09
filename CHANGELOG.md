@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.0.9 (2025-07-09)
+
+- src/routes/(user)/dashboard/contacts/+page.svelte => add handleSearch
+
 ## v1.0.8 (2025-07-09)
 
 - src/lib/api/ContactApi.js => add contactList

@@ -12,6 +12,13 @@
   })
   let contacts = $state([])
 
+  async function handleSearch(e) {
+    e.preventDefault()
+    search.page = 1
+
+    await fetchContacts()
+  }
+
   async function fetchContacts() {
     const response = await contactList(token, search)
     const responseBody = await response.json()
@@ -78,7 +85,7 @@
                 </button>
             </div>
             <div id="searchFormContent" class="mt-4">
-                <form>
+                <form onsubmit={handleSearch}>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <div>
                             <label for="search_name" class="block text-gray-300 text-sm font-medium mb-2">Name</label>
@@ -88,7 +95,7 @@
                                 </div>
                                 <input type="text" id="search_name" name="search_name"
                                     class="w-full pl-10 pr-3 py-3 bg-gray-700 bg-opacity-50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                    placeholder="Search by name">
+                                    placeholder="Search by name" bind:value={search.name}>
                             </div>
                         </div>
                         <div>
@@ -99,7 +106,7 @@
                                 </div>
                                 <input type="text" id="search_email" name="search_email"
                                     class="w-full pl-10 pr-3 py-3 bg-gray-700 bg-opacity-50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                    placeholder="Search by email">
+                                    placeholder="Search by email" bind:value={search.email}>
                             </div>
                         </div>
                         <div>
@@ -110,7 +117,7 @@
                                 </div>
                                 <input type="text" id="search_phone" name="search_phone"
                                     class="w-full pl-10 pr-3 py-3 bg-gray-700 bg-opacity-50 border border-gray-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                    placeholder="Search by phone">
+                                    placeholder="Search by phone" bind:value={search.phone}>
                             </div>
                         </div>
                     </div>
