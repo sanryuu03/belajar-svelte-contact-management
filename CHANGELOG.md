@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.0.10 (2025-07-09)
+
+- src/routes/(user)/dashboard/contacts/+page.svelte => add totalPage, pages, handlePageChange and revisi handleSearch and Pagination
+
 ## v1.0.9 (2025-07-09)
 
 - src/routes/(user)/dashboard/contacts/+page.svelte => add handleSearch
