@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.8 (2025-07-09)
+
+- src/lib/api/ContactApi.js => add contactList
+- src/routes/(user)/dashboard/contacts/+page.svelte
+
 ## v1.0.7 (2025-07-09)
 
 - src/lib/api/ContactApi.js
