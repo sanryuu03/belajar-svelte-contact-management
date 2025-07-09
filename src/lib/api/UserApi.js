@@ -19,3 +19,38 @@ export const userLogin = async ({ username, password }) => {
     body: JSON.stringify({ username, password }),
   });
 };
+
+export const userDetail = async (token) => {
+  return fetch(`${import.meta.env.VITE_URL_API}/users/current`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      Authorization: token,
+    },
+  });
+};
+
+export const userUpdateName = async (token, { name }) => {
+  return fetch(`${import.meta.env.VITE_URL_API}/users/current`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      Authorization: token,
+    },
+    body: JSON.stringify({ name }),
+  });
+};
+
+export const userUpdatePassword = async (token, { password }) => {
+  return fetch(`${import.meta.env.VITE_URL_API}/users/current`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      Authorization: token,
+    },
+    body: JSON.stringify({ password }),
+  });
+};

@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.5 (2025-07-09)
+
+- src/lib/api/UserApi.js => add userDetail, userUpdateName and userUpdatePassword
+- src/routes/(user)/dashboard/users/profile/+page.svelte
+
 ## v1.0.4 (2025-06-24)
 
 - src/routes/(user)/+layout.svelte
