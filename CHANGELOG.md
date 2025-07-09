@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.6 (2025-07-09)
+
+- src/lib/api/UserApi.js => add userLogout
+- src/routes/(user)/dashboard/users/logout/+page.svelte
+
 ## v1.0.5 (2025-07-09)
 
 - src/lib/api/UserApi.js => add userDetail, userUpdateName and userUpdatePassword
