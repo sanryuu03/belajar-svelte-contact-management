@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.7 (2025-07-09)
+
+- src/lib/api/ContactApi.js
+- src/routes/(user)/dashboard/contacts/create/+page.svelte
+
 ## v1.0.6 (2025-07-09)
 
 - src/lib/api/UserApi.js => add userLogout
