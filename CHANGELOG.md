@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.12 (2025-07-13)
+
+- src/lib/api/ContactApi.js => add contactDetail and contactUpdate
+- src/routes/(user)/dashboard/contacts/[id]/edit/+page.svelte
+
 ## v1.0.11 (2025-07-13)
 
 - src/lib/alert.js => add alertConfirm
