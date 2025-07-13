@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.0.11 (2025-07-13)
+
+- src/lib/alert.js => add alertConfirm
+- src/lib/api/ContactApi.js => add contactDelete
+- src/routes/(user)/dashboard/contacts/+page.svelte => add handleDeleteContact
+
 ## v1.0.10 (2025-07-09)
 
 - src/routes/(user)/dashboard/contacts/+page.svelte => add totalPage, pages, handlePageChange and revisi handleSearch and Pagination
