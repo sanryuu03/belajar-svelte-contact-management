@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.0.14 (2025-07-16)
+
+- src/lib/api/AddressApi.js => add addressCreate
+- src/routes/(user)/dashboard/contacts/[id]/+page.svelte => revisi url add address
+- src/routes/(user)/dashboard/contacts/[id]/addresses/create/+page.svelte
+
 ## v1.0.13 (2025-07-15)
 
 - src/routes/(user)/dashboard/contacts/[id]/+page.svelte => detail contact page

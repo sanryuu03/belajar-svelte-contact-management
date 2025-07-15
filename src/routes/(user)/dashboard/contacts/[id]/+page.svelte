@@ -95,7 +95,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <!-- Add Address Card -->
                         <div class="bg-gray-700 bg-opacity-50 p-5 rounded-lg border-2 border-dashed border-gray-600 shadow-md card-hover">
-                            <a href="add_address.html" class="block h-full">
+                            <a href="/dashboard/contacts/{contact.id}/addresses/create" class="block h-full">
                                 <div class="flex flex-col items-center justify-center h-full text-center py-4">
                                     <div class="w-16 h-16 bg-gradient rounded-full flex items-center justify-center mb-4 shadow-lg transform transition-transform duration-300 hover:scale-110">
                                         <i class="fas fa-plus text-2xl text-white"></i>
