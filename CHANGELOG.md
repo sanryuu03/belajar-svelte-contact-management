@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.17 (2025-07-21)
+
+- src/lib/api/AddressApi.js => add addressDelete
+- src/routes/(user)/dashboard/contacts/[id]/+page.svelte => add handleDeleteAddress
+
 ## v1.0.16 (2025-07-21)
 
 - src/lib/api/AddressApi.js => add addressDetail and addressUpdate

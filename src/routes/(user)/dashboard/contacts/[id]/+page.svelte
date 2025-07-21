@@ -1,7 +1,7 @@
 <script>
   import { page } from "$app/state";
-  import { alertError } from "$lib/alert";
-  import { addressList } from "$lib/api/AddressApi";
+  import { alertConfirm, alertError, alertSuccess } from "$lib/alert";
+  import { addressDelete, addressList } from "$lib/api/AddressApi";
   import { contactDetail } from "$lib/api/ContactApi";
   import { onMount } from "svelte";
 
@@ -16,6 +16,23 @@
     })
 
     let addresses = $state([])
+
+    async function handleDeleteAddress(addressId) {
+        if (! await alertConfirm('Are you sure you want to delete this address ?')) {
+            return
+        }
+
+        const response = await addressDelete(token,id,addressId)
+        const responseBody = await response.json()
+        console.log(responseBody);
+
+        if (response.status === 200) {
+            await alertSuccess('Address deleted successfully')
+            await fetchAddressess()
+        } else {
+            await alertError(responseBody.errors)
+        }
+    }
 
     async function fetchAddressess() {
         const response = await addressList(token, id)
@@ -161,7 +178,7 @@
                                 <a href="/dashboard/contacts/{contact.id}/addresses/{address.id}/edit" class="px-4 py-2 bg-gradient text-white rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 font-medium shadow-md flex items-center">
                                     <i class="fas fa-edit mr-2"></i> Edit
                                 </a>
-                                <button class="px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 font-medium shadow-md flex items-center">
+                                <button onclick={() => handleDeleteAddress(address.id)} class="px-4 py-2 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 font-medium shadow-md flex items-center">
                                     <i class="fas fa-trash-alt mr-2"></i> Delete
                                 </button>
                             </div>
