@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.0.15 (2025-07-21)
+
+- src/lib/api/AddressApi.js => add addressList
+- src/routes/(user)/dashboard/contacts/[id]/+page.svelte => add each addressList
+
 ## v1.0.14 (2025-07-16)
 
 - src/lib/api/AddressApi.js => add addressCreate
